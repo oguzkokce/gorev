@@ -1,0 +1,232 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.product-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.product-list h1 {
+  font-family: 'Avenir', 'Montserrat', Arial, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  letter-spacing: 0.01em;
+  position: relative;
+}
+.product-list h1::after {
+  content: '';
+  display: block;
+  width: 180px;
+  height: 2px;
+  background: #e6ca97;
+  margin: 0.7rem auto 0 auto;
+  border-radius: 2px;
+}
+
+.product-list-title {
+  color: #111;
+}
+
+.product-grid {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 1.5rem;
+}
+
+.product-card {
+  background: #f5f5f5;
+  border-radius: 22px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.06);
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 240px;
+  max-width: 260px;
+  transition: box-shadow 0.2s;
+  border: none;
+}
+.product-card:hover {
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.13);
+}
+
+.product-image {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.1rem;
+  background: #f0efed;
+  border-radius: 16px;
+}
+.product-image img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 12px;
+  background: transparent;
+}
+
+.product-info {
+  width: 100%;
+  text-align: left;
+}
+.product-info h2 {
+  font-size: 1.05rem;
+  margin: 0 0 0.4rem 0;
+  font-weight: 600;
+  color: #222;
+}
+.product-price {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #bfa14a;
+  margin-bottom: 0.2rem;
+}
+.product-weight {
+  font-size: 0.93rem;
+  color: #888;
+  margin-bottom: 0.2rem;
+}
+.product-popularity {
+  font-size: 0.97rem;
+  color: #444;
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 1.1rem;
+}
+
+.color-picker {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+.color-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid #eee;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: border 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.04);
+  padding: 0;
+}
+.color-btn.active {
+  border: 2.5px solid #e6ca97;
+  box-shadow: 0 2px 8px 0 rgba(191,161,74,0.13);
+}
+.color-btn.yellow {
+  background: #e6ca97;
+}
+.color-btn.white {
+  background: #d9d9d9;
+}
+.color-btn.rose {
+  background: #e1a4a9;
+}
+
+.selected-color-label {
+  font-size: 0.85rem;
+  color: #bfa14a;
+  margin-top: 0.2rem;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    gap: 1.2rem;
+  }
+  .product-card {
+    min-width: 180px;
+    max-width: 200px;
+    padding: 1rem 0.5rem 0.7rem 0.5rem;
+  }
+  .product-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    gap: 0.7rem;
+  }
+  .product-card {
+    min-width: 140px;
+    max-width: 160px;
+    padding: 0.7rem 0.2rem 0.5rem 0.2rem;
+  }
+  .product-image {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+body {
+  background: #faf9f6;
+  font-family: 'Avenir', 'Montserrat', Arial, sans-serif;
+}
